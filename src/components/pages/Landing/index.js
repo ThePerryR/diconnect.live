@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import DocumentTitle from 'react-document-title'
 import styled from 'styled-components'
 
-import { type } from '../../../utils/style'
 import Button from '../../elements/Button'
 
 const Wrapper = styled.div`
@@ -35,7 +34,6 @@ class Landing extends Component {
 
   componentDidMount () {
     this.socket = window.io.connect(window.location.origin, { secure: true, transports: ['websocket'] })
-    console.log(1, this.socket)
     this.socket.on('update', ({ votes, viewers }) => this.setState({ votes, viewers }))
   }
 

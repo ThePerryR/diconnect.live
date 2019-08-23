@@ -17,6 +17,7 @@ const Wrapper = styled.div`
   background: ${colors.primary};
   color: white;
   cursor: pointer;
+  margin-bottom: 16px;
 `
 
 const Button = (props) => (
