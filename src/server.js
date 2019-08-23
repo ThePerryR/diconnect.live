@@ -56,6 +56,20 @@ io.on('connection', (socket) => {
 app.set('port', process.env.PORT || 3000)
 http.listen(app.get('port'), () => console.log(`Serving from http://0.0.0.0:${app.get('port')}`))
 
+/* Redirect HTTP -> HTTPS */
+if (app.get('env') !== 'development') {
+  app.get('*', (req, res, next) => {
+    const secureNoWww = /^https:\/\/www.disconnect.live/i.test(req.headers.host)
+    const noHttps = req.headers['x-forwarded-proto'] !== 'https'
+    if (secureNoWww || noHttps) {
+      res.redirect(`https://www.disconnect.livee${req.url}`)
+    } else {
+      next()
+    }
+  })
+}
+
+
 /* Serve Static Content */
 app.use(favicon(path.join(__dirname, './public', 'favicon.ico')))
 app.use(express.static(path.join(__dirname, './public')))

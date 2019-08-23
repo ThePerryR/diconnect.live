@@ -46,7 +46,7 @@ class Landing extends Component {
     const scores = Object.keys(this.state.votes).map(type => ({
       type,
       votes: this.state.votes[type]
-    }).sort((a, b) => b.votes - a.votes))
+    })).sort((a, b) => b.votes - a.votes)
     return (
       <DocumentTitle title="What is it???">
         <Wrapper>
