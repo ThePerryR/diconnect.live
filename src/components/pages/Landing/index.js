@@ -51,9 +51,9 @@ class Landing extends Component {
       <DocumentTitle title="What is it???">
         <Wrapper>
           <Centered>
-            <h3 style={{ maxWidth: 500 }}>
-              Welcome to www.disconnect.live
-            </h3>
+            <h1 style={{ maxWidth: 500 }}>
+              Welcome to <span style={{ color: '#189cff' }}>www.disconnect.live</span>
+            </h1>
             <p style={{ maxWidth: 400 }}>
               <b>What is this?</b> I don't know. You tell me. I'll setup polls to vote on the next feature of this site.
               I'll whip up things as quick as possible as we build this together!
