@@ -52,8 +52,12 @@ class Landing extends Component {
         <Wrapper>
           <Centered>
             <h3 style={{ maxWidth: 500 }}>
-              Hey guys, I&apos;m going to go get dinner, then I&apos;ll start working on what you guys vote for!
+              Welcome to disconnect live?
             </h3>
+            <p><b>
+              What is this?</b> I don't know. You tell me. I'll setup polls to vote on the next feature of this site.
+              I'll whip up things as quick as possible as we build this together!
+            </p>
 
             {!this.state.voted &&
             <div>
